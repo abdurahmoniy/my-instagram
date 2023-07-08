@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './auth.css'
 import logo from '../../assets/logo.png'
 import appstore from '../../assets/appstore.png'
 import googleplay from '../../assets/googleplay.png'
 export default function Login() {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
   return (
     <div className='my-20'>
       <div className="border w-[350px] m-auto text-center py-4">
         <img src={logo} alt="" className='w-[200px] mx-auto my-4' />
-        <input type="text" className='h-[38px] w-[260px] px-[4px] mx-[20px] border rounded placeholder:text-[14px] my-1' placeholder='Phone number, username or email' />
-        <input type="text" className='h-[38px] w-[260px] px-[4px] mx-[20px] border rounded placeholder:text-[14px] my-1' placeholder='Password' />
+        <div className={`input-container ${isFocused ? 'input-focused' : ''}`}>
+          <input type="text" onFocus={handleFocus} className='h-[38px] w-[260px] px-[4px] mx-[20px] border rounded placeholder:text-[14px] my-1' />
+          <label className="placeholder">Enter your text</label>
+        </div>
+        <div className={`input-container ${isFocused ? 'input-focused' : ''}`}>
+          <input type="text" onFocus={handleFocus} className='h-[38px] w-[260px] px-[4px] mx-[20px] border rounded placeholder:text-[14px] my-1' />
+          <label className="placeholder">Enter your text</label>
+        </div>
         <button className='my-2 w-[260px] py-1 rounded-md text-white instabtn'>Log in</button>
         <div className="underln"></div>
         <div className=" text-blue-950 flex items-center justify-center my-4">

@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.underln::before{
+.underln::before {
     content: 'OR';
     background: #fff;
     width: 50px;
@@ -20,3 +20,28 @@
 .instabtn {
     background-color: rgb(0, 149, 246);
 }
+
+input:focus {
+    outline: 1px rgb(70, 69, 69) solid;
+}
+
+.input-container {
+    position: relative;
+  }
+  
+  .input-container .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    pointer-events: none;
+    color: #999;
+  }
+  
+  .input-container.input-focused .placeholder {
+    top: 5px;
+    font-size: 12px;
+    color: #000;
+  }
+  
