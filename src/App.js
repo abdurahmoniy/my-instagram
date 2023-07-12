@@ -5,13 +5,13 @@ import MainScreen from './components/Main/MainScreen';
 import { GlobalContext } from './state/context/GlobalContext';
 
 function App() {
-  // const {isAuthenticated, isOnboarded} = useContext(GlobalContext)
+  const {isAuthenticated, isOnboarded} = useContext(GlobalContext)
 
   return (
     // isAuthenticated && isOnboarded ? <MainScreen /> : <Auth />
-    <div>
-      my instagram
-    </div>
+    <>
+    <MainScreen/>
+    </>
   );
 }
 
