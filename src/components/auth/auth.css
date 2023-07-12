@@ -1,47 +1,137 @@
-.underln {
-    border-bottom: 1px solid gray;
-    margin: 30px 45px;
-    display: flex;
-    justify-content: center;
+.auth {
+    padding-top: 100px;
+}
+
+.auth__main {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    justify-content: space-between;
     align-items: center;
 }
 
-.underln::before {
-    content: 'OR';
-    background: #fff;
-    width: 50px;
-    position: absolute;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.auth__animate {
+    width: 400px;
+    margin: 0 auto;
 }
 
-.instabtn {
-    background-color: rgb(0, 149, 246);
-}
-
-input:focus {
-    outline: 1px rgb(70, 69, 69) solid;
-}
-
-.input-container {
+.auth__content {
     position: relative;
-  }
-  
-  .input-container .placeholder {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    transition: all 0.2s;
-    pointer-events: none;
-    color: #999;
-  }
-  
-  .input-container.input-focused .placeholder {
-    top: 5px;
-    font-size: 12px;
-    color: #000;
-  }
-  
+}
+
+.auth__form {
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid rgb(191, 191, 191);
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 40px;
+    font-family: 'inst';
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.auth__form input {
+    background-color: rgb(245, 245, 245);
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(213, 213, 213);
+}
+
+.auth__form input:focus {
+    border: 1px solid rgb(155, 155, 155);
+}
+
+.auth__form button {
+    background-color: rgb(39, 125, 254);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.auth__form button:hover {
+    background-color: rgb(0, 102, 254);
+}
+
+.auth__or {
+    text-align: center;
+    color: gray;
+}
+
+.auth__facebook {
+    margin-top: 5px;
+    color: rgb(52, 52, 158);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.auth__pass {
+    margin-top: 5px;
+    color: gray;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.auth__reg {
+    border-radius: 3px;
+    margin-top: 20px;
+    display: flex;
+    border: 1px solid rgb(191, 191, 191);
+    padding: 20px;
+    justify-content: center;
+}
+
+.auth__reg p button {
+    color: rgb(34, 34, 216);
+    background: transparent;
+}
+
+.auth__apps {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.apps {
+    display: flex;
+    gap: 10px;
+}
+
+.apps img {
+    cursor: pointer;
+    width: 130px;
+    height: 44px;
+}
+
+.auth__footer div span {
+    cursor: pointer;
+}
+
+@media (max-width: 825px) {
+    .auth__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .auth__animate {
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+.MainScreen__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainScreen__content {
+    max-width: 700px;
+    padding-top: 40px;
+}
