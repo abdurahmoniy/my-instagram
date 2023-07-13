@@ -15,8 +15,7 @@ const MainScreen = () => {
         <div className='MainScreen'>
             <div className='container'>
                 <div className="MainScreen__body">
-                    Instagram
-                    {/* <Sidebar />
+                    <Sidebar />
                     <Modal />
                     <div className="MainScreen__content">
                         <Routes >
@@ -24,7 +23,7 @@ const MainScreen = () => {
                             <Route path={`/${user.username}`} element={<Profile />} />
                         </Routes>
                     </div>
-                    <Suggestions /> */}
+                    <Suggestions />
                 </div>
             </div>
         </div>
