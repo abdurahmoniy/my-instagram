@@ -1,7 +1,7 @@
 import React, { useContext, useMemo, useState } from "react";
 import useForm from "../../hooks/useForm";
-import "./Auth.css";
-import googlePlay from "../../assets/googlePlay.png";
+import "./auth.css";
+import googlePlay from "../../assets/googleplay.png";
 import microsoft from "../../assets/microsoft.png";
 import {
   GlobalContext,
